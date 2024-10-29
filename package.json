@@ -1,12 +1,25 @@
 {
-  "name": "debugger",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "husky": "^9.1.6",
+    "typescript-eslint": "^8.12.2"
+  },
+  "scripts": {
+    "prepare": "husky"
+  }
 }
